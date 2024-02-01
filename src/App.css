@@ -1,0 +1,359 @@
+@font-face {
+  font-family: 'Road Rage';
+  src: url('Gothica-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Migra Extra Bold';
+  src: url('Migra-Extrabold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('PPNeueMontreal-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Neue Montreal Bold';
+  src: url('PPNeueMontreal-Bold.otf') format('opentype');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Neue Montreal';
+  color: white;
+}
+
+.App {
+  position: relative;
+  overflow: auto;
+}
+
+.App-header {
+  margin: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(247, 245, 245, 0.2);
+  z-index: 1;
+}
+
+.App-header h1 {
+  font-family: 'Road Rage';
+  color: white;
+  font-size: 2.5em;
+  margin-left: 1em;
+}
+
+.navlink {
+  font-size: 2em;
+  color: white;
+  margin-right: 2em;
+  font-weight: 900;
+  font-family: 'Neue Montreal Bold';
+  transition: transform 0.3s ease, font-size 0.3s ease;
+
+}
+
+.navlink:hover{
+
+ transform: scale(1.1);
+
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 2em;
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .App-header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  .navlink {
+    margin: 10px 0;
+  }
+}
+
+#particle-system-container {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.ContactMe {
+  margin: 1em;
+  padding: 0.5em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  font-family: 'Migra Extra Bold', sans-serif;
+  font-size: 2em;
+  margin-bottom: 5em;
+}
+
+
+
+.contact-details {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-evenly; 
+  width: 100%; 
+  align-items: center; 
+  gap: 1em; 
+}
+
+.contact-details .contact-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Neue Montreal Bold';
+  transition: transform 0.3s ease, font-size 0.3s ease;
+
+}
+
+.contact-details .contact-link:hover {
+  transform: scale(1.1);
+}
+
+
+.AboutMe {
+ margin: 1.5em;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  font-family: 'Neue Montreal Bold';
+  margin-bottom: 1rem;
+}
+
+.profile-picture {
+  max-width: 300px; /* Increased size */
+  max-height: 400px; /* Increased size */
+  width: 100%; /* This allows the image to be responsive */
+  height: auto; /* Maintain aspect ratio */
+  border: 3px solid white;
+}
+
+
+.profile-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Neue Montreal';
+  margin-bottom: 2rem;
+}
+
+
+/* Base styles (for mobile devices) */
+.Bold-Immersive-Memorable {
+  font-family: 'Migra Extra Bold';
+  font-size: 1.5rem; /* Adjust as needed for mobile */
+}
+
+/* Media query for tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .Bold-Immersive-Memorable {
+    font-size: 2.5rem;
+  }
+  .profile-header-container{
+    font-size: 1rem;
+  }
+
+}
+
+/* Media query for laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .Bold-Immersive-Memorable {
+    font-size: 3.5rem;
+  }
+  .profile-header-container{
+    font-size: 2rem;
+  }
+}
+
+/* Media query for desktops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .Bold-Immersive-Memorable {
+    font-size: 6rem;
+  }
+  .profile-header-container{
+    font-size: 2.5rem;
+  }
+  .profile-picture{
+    max-width: 500px;
+    max-height: 800px;
+    
+  }
+
+}
+
+
+@media (min-width: 1441px) {
+  .Bold-Immersive-Memorable {
+    font-size: 10rem;
+  }
+  .profile-header-container{
+    font-size: 4.5rem;
+  }
+  .profile-picture{
+    max-width: 800px;
+    max-height: 1000px;
+    
+  }
+}
+
+
+
+
+
+.experience-section ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 1024px) { /* for tablets */
+  .experience-section ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) { /* for mobile phones */
+  .experience-section ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.experience-section li {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Base font size for small devices (mobile phones) */
+.experience-section {
+  font-size: 1rem; /* Default font size */
+}
+
+/* Media query for tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .experience-section {
+    font-size: 1.2rem; /* Slightly larger font size for tablets */
+  }
+}
+
+/* Media query for laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .experience-section {
+    font-size: 1.4rem; /* Larger font size for laptops */
+  }
+}
+
+/* Media query for desktops */
+@media (min-width: 1025px) {
+  .experience-section {
+    font-size: 1.6rem; /* Even larger font size for desktops */
+  }
+}
+
+
+.mahname{
+text-decoration: underline;
+}
+
+.credits-sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 33%;
+  height: 100%;
+  background-color: black;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  opacity: 0;
+}
+
+.credits-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: 'Neue Montreal';
+}
+
+.credits-sidebar h4 {
+  margin: 0;
+  font-family: 'Neue Montreal';
+}
+
+.credits-sidebar button {
+  padding: 5px 10px;
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Neue Montreal';
+}
+
+.credits-sidebar button:hover {
+  background-color: white;
+  color: black;
+}
+
+.credits-sidebar .credits-content h4 {
+  margin-top: 20px;
+}
+
+.credits-sidebar .credits-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.credits-sidebar .credits-content ul li {
+  margin-bottom: 10px;
+}
+
+.CreditsFooter {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px; 
+  cursor: pointer;
+}
+
+.CreditsFooter:hover {
+
+  text-decoration: line-through;
+
+}
+
