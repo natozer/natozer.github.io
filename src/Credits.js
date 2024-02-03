@@ -24,7 +24,6 @@ const CreditsSidebar = ({ setShowCredits }) => {
       <div className="credits-content">
         <h4>FONTS</h4>
         <ul>
-          <li>Gothica</li>
           <li>Migra</li>
           <li>Neue Montreal</li>
         </ul>
@@ -32,7 +31,12 @@ const CreditsSidebar = ({ setShowCredits }) => {
         <ul>
           <li>Loyalty to the Crown - Grand_Project</li>
         </ul>
+           <h4>BACKGROUND PAINTING</h4>
+      <ul>
+          <li>French Neoclassical School - Aurora and Cephalus, circa 1810</li>
+        </ul>
       </div>
+   
     </div>
   );
 };

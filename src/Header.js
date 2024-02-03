@@ -7,9 +7,9 @@ function Header({ isPlaying, toggleMusic, onContactClick }) {
   return (
     <header className='App-header'>
       <h1>
-        NATHANIEL ADDISON TOZER
+        NATHANIEL ADDISON TOZER - FULL STACK WEB DEVELOPER
       </h1>
-      <nav>
+      <div className='header-buttons'>
         <button className='navlink' onClick={onContactClick}>
           CONTACT
         </button>
@@ -20,7 +20,7 @@ function Header({ isPlaying, toggleMusic, onContactClick }) {
             <UnmuteIcon />
           )}
         </button>
-      </nav>
+      </div>
     </header>
   );
 }

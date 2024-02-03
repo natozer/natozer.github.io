@@ -6,7 +6,6 @@ const ParticleSystem = forwardRef(() => {
   const sceneRef = useRef(null);
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
-  const controlsRef = useRef(null);
 
   useEffect(() => {
     // Initialize camera, scene, and renderer
@@ -30,10 +29,6 @@ const ParticleSystem = forwardRef(() => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById('particle-system-container').appendChild(renderer.domElement);
     rendererRef.current = renderer;
-
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controlsRef.current = controls;
-    controls.enableZoom = false;
 
     // Geometry and materials setup
     const geometry = new THREE.BufferGeometry();
@@ -87,7 +82,6 @@ const ParticleSystem = forwardRef(() => {
     // Animation loop
     function animate() {
       requestAnimationFrame(animate);
-      controls.update(); 
 
       let time = Date.now() * 0.00005;
 

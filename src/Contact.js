@@ -24,10 +24,10 @@ const ContactMe = forwardRef((props, ref) => {
 
   return (
     <div ref={ref} className="ContactMe">
-      <h1 className="headline">I'm looking for work!</h1>
+      <h1 className="headline">Lets get in touch.</h1>
       <div className="contact-details">
         <a href="mailto:natozer@gmail.com" className="contact-link">Contact Me</a>
-        <a href="https://www.linkedin.com/in/natozer" className="contact-link"> My LinkedIn</a>
+        <a href="https://www.linkedin.com/in/natozer" className="contact-link">LinkedIn</a>
         
       </div>
     </div>
