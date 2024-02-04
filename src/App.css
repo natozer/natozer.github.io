@@ -1,5 +1,4 @@
 
-
 @font-face {
   font-family: 'Migra Extra Bold';
   src: url('Migra-Extrabold.ttf') format('truetype');
@@ -155,11 +154,15 @@ button {
   font-family: 'Migra Extra Bold';
 }
 
+.intro{
+  font-size: 3em;
+  margin-bottom: 1em;
+}
 
 /* Base styles (for mobile devices) */
 .Bold-Immersive-Memorable {
   font-family: 'Migra Extra Bold';
-  font-size: 1.5rem; /* Adjust as needed for mobile */
+  font-size: 1rem; /* Adjust as needed for mobile */
 }
 
 /* Media query for tablets */
@@ -168,7 +171,11 @@ button {
     font-size: 2.5rem;
   }
   .profile-header-container{
-    font-size: 1rem;
+    font-size: 2rem;
+  }
+
+  .intro{
+    font-size: 2rem;
   }
 
 }
@@ -189,13 +196,10 @@ button {
     font-size: 6rem;
   }
   .profile-header-container{
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
 
-  .header-text{
-   font-size: 3em;
-  }
 
 }
 
@@ -205,9 +209,11 @@ button {
     font-size: 10rem;
   }
   .profile-header-container{
-    font-size: 4.5rem;
+    font-size: 8rem;
   }
-
+  .intro{
+    font-size: 4rem;
+  }
 }
 
 
@@ -246,27 +252,27 @@ button {
 
 /* Base font size for small devices (mobile phones) */
 .experience-section {
-  font-size: 1rem; /* Default font size */
+  font-size: 1rem; 
 }
 
 /* Media query for tablets */
 @media (min-width: 481px) and (max-width: 768px) {
   .experience-section {
-    font-size: 1.2rem; /* Slightly larger font size for tablets */
+    font-size: 1.2rem; 
   }
 }
 
 /* Media query for laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
   .experience-section {
-    font-size: 1.4rem; /* Larger font size for laptops */
+    font-size: 1.4rem; 
   }
 }
 
 /* Media query for desktops */
 @media (min-width: 1025px) {
   .experience-section {
-    font-size: 1.6rem; /* Even larger font size for desktops */
+    font-size: 1.6rem; 
   }
 }
 
@@ -282,7 +288,7 @@ button {
   z-index: 100;
   display: flex;
   flex-direction: column;
-  font-size: 1.5em;
+  font-size: 1.2em;
   opacity: 0;
 }
 
@@ -342,7 +348,3 @@ button {
 
 }
 
-.intro{
-  font-size: 3em;
-  margin-bottom: 1em;
-}

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, forwardRef } from 'react';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const ParticleSystem = forwardRef(() => {
   const sceneRef = useRef(null);
@@ -8,7 +7,6 @@ const ParticleSystem = forwardRef(() => {
   const rendererRef = useRef(null);
 
   useEffect(() => {
-    // Initialize camera, scene, and renderer
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 2000);
     camera.position.z = 1000;
     cameraRef.current = camera;
@@ -16,7 +14,6 @@ const ParticleSystem = forwardRef(() => {
     const scene = new THREE.Scene();
     const textureLoader = new THREE.TextureLoader();
 
-    // Load background texture
     textureLoader.load('images/image.jpg', function(texture) {
       scene.background = texture;
     });
@@ -30,7 +27,6 @@ const ParticleSystem = forwardRef(() => {
     document.getElementById('particle-system-container').appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
-    // Geometry and materials setup
     const geometry = new THREE.BufferGeometry();
     const vertices = [];
     for (let i = 0; i < 1000; i++) {
@@ -71,7 +67,6 @@ const ParticleSystem = forwardRef(() => {
 
     }
 
-    // Handle window resize
     function onWindowResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
@@ -79,7 +74,7 @@ const ParticleSystem = forwardRef(() => {
     }
     window.addEventListener('resize', onWindowResize);
 
-    // Animation loop
+
     function animate() {
       requestAnimationFrame(animate);
 
@@ -96,12 +91,11 @@ const ParticleSystem = forwardRef(() => {
     }
     animate();
 
-    // Cleanup on unmount
     return () => {
       document.getElementById('particle-system-container').removeChild(renderer.domElement);
       window.removeEventListener('resize', onWindowResize);
     };
-  }, []); // Empty dependency array ensures this runs once on mount only
+  }, []); 
 
   return <div id="particle-system-container" />;
 });

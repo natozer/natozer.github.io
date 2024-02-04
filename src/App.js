@@ -6,14 +6,18 @@ import AboutMe from './AboutMe';
 import ContactMe from './Contact';
 import CreditsSidebar from './Credits';
 
+/*
+No snoopin' around!
+*/
+
 function App() {
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [showCredits, setShowCredits] = useState(false);
 
-  const audioRef = useRef(new Audio('bgm.mp3'));
+  const audioRef = useRef(new Audio('music/bgm.mp3'));
   const contactRef = useRef(null);
-  
+
   audioRef.current.loop = true;
 
   const handleCreditsClick = () => {
@@ -33,13 +37,13 @@ function App() {
     <div className="App">
       <ParticleSystem />
       <Header
-  isPlaying={isPlaying}
-  toggleMusic={toggleMusic}
-  onContactClick={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })}
-/>
+        isPlaying={isPlaying}
+        toggleMusic={toggleMusic}
+        onContactClick={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })}
+      />
 
-<AboutMe />
-<ContactMe ref={contactRef} />
+      <AboutMe />
+      <ContactMe ref={contactRef} />
 
       <p className='CreditsFooter' onClick={handleCreditsClick}>Credits</p>
       {showCredits && <CreditsSidebar setShowCredits={setShowCredits} />}
