@@ -1,0 +1,30 @@
+.backendcolumn {
+    grid-area: five;
+    font-size: 2em;
+    background-color: transparent;
+    font-family: 'Koliko Regular';
+    color: var(--main-text);
+    text-transform: uppercase;
+    box-shadow: 
+    0 0 40px 10px var(--shadow-color); 
+}
+
+.backendcolumn .skills-column ul {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+.backendcolumn .skills-column ul li {
+    border: 3px solid var(--main-text);
+    ;
+    padding: 10px; 
+    margin: 5px;
+    text-align: right;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+
+.backendcolumn .skills-column ul li:hover {
+    background-color: none;
+    color: #FFCC66;
+}

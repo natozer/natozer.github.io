@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: one;
+    color: var(--main-text);
+    font-family: 'Road Rage', sans-serif;
+    font-size: 2em;
+    text-shadow: 
+      0 0 0.2rem #FFCC66, 
+      0 0 0.5rem #FF9933, 
+      0 0 0.5rem #FF6600, 
+      0 0 0.8rem #CC5500; 
+    box-sizing: border-box;
+    background: transparent;
+    
+}

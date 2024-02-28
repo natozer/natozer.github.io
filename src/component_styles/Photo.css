@@ -1,0 +1,11 @@
+.photo {
+    grid-area: three;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    box-shadow: 
+    0 0 40px 10px var(--shadow-color);
+   
+  }
+  

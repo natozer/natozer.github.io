@@ -1,52 +1,67 @@
-import React, { useState, useRef } from 'react';
-import './App.css';
-import ParticleSystem from './ParticleSystem';
-import Header from './Header';
-import AboutMe from './AboutMe';
-import ContactMe from './Contact';
-import CreditsSidebar from './Credits';
-
-/*
-No snoopin' around!
-*/
+import React, { useRef, useEffect } from "react";
+import "./App.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Leader from "./components/Leader";
+import FrontEndSkillsColumn from "./components/FrontEndSkillsColumn";
+import Header from "./components/Header";
+import ThreeBackground from "./components/ThreeBackground";
+import Photo from "./components/Photo";
+import BackEndSkillsColumn from "./components/BackEndSkillsColumn";
+import SubLeader from "./components/SubLeader";
+import Ending from "./components/Ending";
+import LetsTalk from "./components/LetsTalk";
+import Contact from "./components/Contact";
 
 function App() {
-
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [showCredits, setShowCredits] = useState(false);
-
-  const audioRef = useRef(new Audio('music/bgm.mp3'));
-  const contactRef = useRef(null);
-
+  const audioRef = useRef(new Audio("music/neoncitybrightvision.mp3"));
   audioRef.current.loop = true;
 
-  const handleCreditsClick = () => {
-    setShowCredits(!showCredits);
-  };
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-  const toggleMusic = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
+    const playAudio = async () => {
+      try {
+        await audioRef.current.play();
+      } catch (err) {
+        
+      }
+    };
+    playAudio();
+    let colorChanged = false; 
+
+
+    const triggerElement = document.getElementById("blue"); 
+    ScrollTrigger.create({
+      trigger: triggerElement,
+      start: "top center",
+      end: "bottom center",
+      onEnter: () => {
+        gsap.to(':root', { '--main-text': '#007BFF', duration: 1 });
+        colorChanged = true; 
+      },
+      onLeaveBack: () => {
+        if (colorChanged) {
+          gsap.to(':root', { '--main-text': '#ffcc66', duration: 1 });
+        }
+      },
+    });
+  }, []);
 
   return (
     <div className="App">
-      <ParticleSystem />
-      <Header
-        isPlaying={isPlaying}
-        toggleMusic={toggleMusic}
-        onContactClick={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })}
-      />
-
-      <AboutMe />
-      <ContactMe ref={contactRef} />
-
-      <p className='CreditsFooter' onClick={handleCreditsClick}>Credits</p>
-      {showCredits && <CreditsSidebar setShowCredits={setShowCredits} />}
+      <ThreeBackground />
+      <main className="grid">
+        <Header />
+        <Leader />
+        <Photo />
+        <FrontEndSkillsColumn />
+        <BackEndSkillsColumn />
+        <SubLeader />
+        <Ending />
+        <LetsTalk />
+        <Contact />
+      </main>
     </div>
   );
 }
