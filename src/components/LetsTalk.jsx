@@ -28,7 +28,9 @@ function LetsTalk() {
 
   return (
     <div ref={letsTalkRef} className="letstalk grid-item">
-      <h1>So let's talk...</h1>
+      <h1 className="fancy">So let's talk...</h1>
+      <h3><a href="mailto:natozer@gmail.com">Email</a></h3>
+      <h3><a href="https://www.linkedin.com/in/natozer" target="_blank" rel="noopener noreferrer">LinkedIn</a></h3>
     </div>
   );
 }

@@ -11,34 +11,48 @@ import BackEndSkillsColumn from "./components/BackEndSkillsColumn";
 import SubLeader from "./components/SubLeader";
 import Ending from "./components/Ending";
 import LetsTalk from "./components/LetsTalk";
-import Contact from "./components/Contact";
+
+/*
+-Website designed and coded by me (Nathaniel Tozer)
+-Song is Neon City (Bright Vision) by AlexGrohl
+-Fonts are Koliko, Cherish, and Road Rage
+-Personal use obviously, not commercial. No money is being made from this personal project.
+-Extra thanks to the people that created GSAP and Three.js
+*/
 
 function App() {
-  const audioRef = useRef(new Audio("music/neoncitybrightvision.mp3"));
+  const audioRef = useRef(new Audio("music/brightvision.mp3"));
   audioRef.current.loop = true;
+  audioRef.current.muted = true; 
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const playAudio = async () => {
-      try {
-        await audioRef.current.play();
-      } catch (err) {
-        
+   
+    const togglePlayPause = () => {
+      if (audioRef.current.muted) {
+        audioRef.current.muted = false; 
+      }
+      if (audioRef.current.paused) {
+        audioRef.current.play().catch(err => console.error("Error playing audio:", err));
+      } else {
+        audioRef.current.pause();
       }
     };
-    playAudio();
-    let colorChanged = false; 
 
+ 
+    const app = document.querySelector('.App');
+    app.addEventListener('click', togglePlayPause);
 
-    const triggerElement = document.getElementById("blue"); 
+    let colorChanged = false;
+    const triggerElement = document.getElementById("blue");
     ScrollTrigger.create({
       trigger: triggerElement,
       start: "top center",
       end: "bottom center",
       onEnter: () => {
         gsap.to(':root', { '--main-text': '#007BFF', duration: 1 });
-        colorChanged = true; 
+        colorChanged = true;
       },
       onLeaveBack: () => {
         if (colorChanged) {
@@ -46,6 +60,8 @@ function App() {
         }
       },
     });
+
+    return () => app.removeEventListener('click', togglePlayPause);
   }, []);
 
   return (
@@ -60,7 +76,6 @@ function App() {
         <SubLeader />
         <Ending />
         <LetsTalk />
-        <Contact />
       </main>
     </div>
   );

@@ -44,7 +44,7 @@ function Header() {
     }
   }, []);
 
-  const text = "NATHANIEL TOZER";
+  const text = "Nathaniel Tozer";
   const characters = text.split("").map((char, index) => {
     if (char === ' ') {
       return <span key={index} style={{ display: 'inline-block', width: '0.5em' }}>&nbsp;</span>;

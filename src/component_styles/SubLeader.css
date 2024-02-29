@@ -6,7 +6,7 @@
   margin-top: 2em;
   margin-bottom: 2em;
   grid-area: six;
-  color: var(--main-text); 
+  color: #ffcc66;
   font-family: 'Koliko Regular', sans-serif;
   text-transform: uppercase;
   font-size: 1.5em;
@@ -14,5 +14,6 @@
   background: none;
   box-shadow: 
   0 0 40px 10px var(--shadow-color);
+  text-shadow: 0 0 0.2rem #FFCC66;
 
 }
