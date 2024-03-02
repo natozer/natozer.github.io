@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.d684b019.css",
-    "main.js": "/static/js/main.8d6b8676.js",
+    "main.js": "/static/js/main.3e33ab83.js",
     "static/media/Road_Rage.otf": "/static/media/Road_Rage.03e8327bbbb7b1abbae9.otf",
     "static/media/Cherish-Regular.ttf": "/static/media/Cherish-Regular.3719acfb907e4d3b2832.ttf",
     "static/media/me.png": "/static/media/me.e42913fa2883e3ff2721.png",
     "static/media/OT2049-Regular.otf": "/static/media/OT2049-Regular.8ca597fa289cd4dbd774.otf",
     "index.html": "/index.html",
     "main.d684b019.css.map": "/static/css/main.d684b019.css.map",
-    "main.8d6b8676.js.map": "/static/js/main.8d6b8676.js.map"
+    "main.3e33ab83.js.map": "/static/js/main.3e33ab83.js.map"
   },
   "entrypoints": [
     "static/css/main.d684b019.css",
-    "static/js/main.8d6b8676.js"
+    "static/js/main.3e33ab83.js"
   ]
 }
