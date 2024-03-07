@@ -1,63 +1,22 @@
-import React, { useEffect, useRef } from 'react';
-import '../component_styles/Header.css';
-import { gsap } from 'gsap';
+import React from "react";
+import { ReactComponent as MuteIcon } from "../assets/mute.svg";
+import { ReactComponent as UnmuteIcon } from "../assets/unmute.svg";
+import "../component_styles/AppHeader.css";
 
-function Header() {
-  const headingRef = useRef(null);
-
-  useEffect(() => {
-    if (headingRef.current) {
-      const chars = headingRef.current.querySelectorAll('span');
-      gsap.set(chars, { autoAlpha: 0 });
-
-      const animation = gsap.to(chars, {
-        autoAlpha: 1,
-        duration: 1,
-        stagger: 0.5,
-        ease: "power2.out",
-        paused: true 
-      });
-
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              animation.play();
-            } else {
-              animation.reverse();
-            }
-          });
-        },
-        {
-          threshold: 0.1 
-        }
-      );
-
-      observer.observe(headingRef.current);
-
-      return () => {
-        if (headingRef.current) {
-          observer.unobserve(headingRef.current);
-        }
-      };
-    }
-  }, []);
-
-  const text = "Nathaniel Tozer";
-  const characters = text.split("").map((char, index) => {
-    if (char === ' ') {
-      return <span key={index} style={{ display: 'inline-block', width: '0.5em' }}>&nbsp;</span>;
-    }
-    return <span key={index} style={{ display: 'inline-block' }}>{char}</span>;
-  });
-  
+function Header({ isPlaying, toggleMusic, onContactClick, onCreditsClick }) {
   return (
-    <div className="header">
-      <h1 ref={headingRef}>
-        {characters}
-      </h1>
-    </div>
+    <header className="App-header">
+      <div>NATHANIEL ADDISON TOZER - FULL STACK WEB DEVELOPER</div>
+      <div className="navlink" onClick={onContactClick}>
+        CONTACT
+      </div>
+      <div className="navlink" onClick={onCreditsClick}>
+        CREDITS
+      </div>
+      <button onClick={toggleMusic}>
+        {isPlaying ? <MuteIcon /> : <UnmuteIcon />}
+      </button>
+    </header>
   );
 }
 

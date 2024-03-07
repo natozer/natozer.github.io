@@ -1,82 +1,84 @@
-import React, { useRef, useEffect } from "react";
-import "./App.css";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Leader from "./components/Leader";
-import FrontEndSkillsColumn from "./components/FrontEndSkillsColumn";
-import Header from "./components/Header";
-import ThreeBackground from "./components/ThreeBackground";
-import Photo from "./components/Photo";
-import BackEndSkillsColumn from "./components/BackEndSkillsColumn";
-import SubLeader from "./components/SubLeader";
-import Ending from "./components/Ending";
-import LetsTalk from "./components/LetsTalk";
-
-/*
--Website designed and coded by me (Nathaniel Tozer)
--Song is Neon City (Bright Vision) by AlexGrohl
--Fonts are Koliko, Cherish, and Road Rage
--Personal use obviously, not commercial. No money is being made from this personal project.
--Extra thanks to the people that created GSAP and Three.js
-*/
+import React, { useState, useRef, useEffect } from 'react';
+import './App.css';
+import SnowScene from './components/SnowScene';
+import Header from './components/Header';
+import AboutMe from './components/AboutMe';
+import ContactMe from './components/Contact';
+import CreditsSidebar from './components/CreditsSidebar';
+import Hero from './components/Hero';
+import Experience from './components/Experience';
+import MobileMessage from './components/MobileMessage';
 
 function App() {
-  const audioRef = useRef(new Audio("music/brightvision.mp3"));
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [showCredits, setShowCredits] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const audioRef = useRef(new Audio('music/bgm.mp3'));
+  const contactRef = useRef(null);
+
   audioRef.current.loop = true;
-  audioRef.current.muted = true; 
+
+  const handleCreditsClick = () => {
+    setShowCredits(!showCredits);
+  };
+
+  const toggleMusic = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    const aspectRatioThreshold = 1.5;
 
-   
-    const togglePlayPause = () => {
-      if (audioRef.current.muted) {
-        audioRef.current.muted = false; 
-      }
-      if (audioRef.current.paused) {
-        audioRef.current.play().catch(err => console.error("Error playing audio:", err));
-      } else {
-        audioRef.current.pause();
-      }
+    const checkMobileStatus = () => {
+      const aspectRatio = window.innerWidth / window.innerHeight;
+      const isMobile = aspectRatio < aspectRatioThreshold;
+      setIsMobile(isMobile);
     };
 
- 
-    const app = document.querySelector('.App');
-    app.addEventListener('click', togglePlayPause);
+    checkMobileStatus();
+    window.addEventListener('resize', checkMobileStatus);
 
-    let colorChanged = false;
-    const triggerElement = document.getElementById("blue");
-    ScrollTrigger.create({
-      trigger: triggerElement,
-      start: "top center",
-      end: "bottom center",
-      onEnter: () => {
-        gsap.to(':root', { '--main-text': '#007BFF', duration: 1 });
-        colorChanged = true;
-      },
-      onLeaveBack: () => {
-        if (colorChanged) {
-          gsap.to(':root', { '--main-text': '#ffcc66', duration: 1 });
-        }
-      },
-    });
+    window.addEventListener('contextmenu', handleContextMenu);
 
-    return () => app.removeEventListener('click', togglePlayPause);
+    return () => {
+      window.removeEventListener('resize', checkMobileStatus);
+      window.removeEventListener('contextmenu', handleContextMenu);
+    };
   }, []);
+
+  const handleContextMenu = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className="App">
-      <ThreeBackground />
-      <main className="grid">
-        <Header />
-        <Leader />
-        <Photo />
-        <FrontEndSkillsColumn />
-        <BackEndSkillsColumn />
-        <SubLeader />
-        <Ending />
-        <LetsTalk />
-      </main>
+      {isMobile ? (
+        <>
+          <SnowScene />
+          <MobileMessage />
+        </>
+      ) : (
+        <>
+          <SnowScene />
+          <Header
+            isPlaying={isPlaying}
+            toggleMusic={toggleMusic}
+            onContactClick={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })}
+            onCreditsClick={handleCreditsClick}
+          />
+          <Hero />
+          <AboutMe />
+          <Experience />
+          <ContactMe ref={contactRef} />
+          {showCredits && <CreditsSidebar setShowCredits={setShowCredits} />}
+        </>
+      )}
     </div>
   );
 }

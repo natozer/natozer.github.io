@@ -1,152 +1,80 @@
 @font-face {
-  font-family: 'Koliko Regular';
-  src: url('fonts/koliko-Regular.ttf') format('truetype');
+  font-family: "Migra Extra Bold";
+  src: url("fonts/Migra-Extrabold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Road Rage';
-  src: url('fonts/Road_Rage.otf') format('opentype');
+  font-family: "Neue Montreal";
+  src: url("fonts/PPNeueMontreal-Medium.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'Cherish Regular';
-  src: url('fonts/Cherish-Regular.ttf') format('truetype');
+  font-family: "Neue Montreal Bold";
+  src: url("fonts/PPNeueMontreal-Bold.otf") format("opentype");
 }
 
-
-
-:root {
-  --main-text: #ffcc66;
-  --shadow-color: rgba(0, 123, 255, 0.5); 
-
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(7%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 10%);
+  }
+  50% {
+    transform: translate(-10%, 6%);
+  }
+  60% {
+    transform: translate(10%, 0%);
+  }
+  70% {
+    transform: translate(0%, 10%);
+  }
+  80% {
+    transform: translate(3%, 8%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
 }
 
-a {
-  color: inherit; 
-  text-decoration: none; 
-  cursor: pointer; 
+html,
+body {
+  margin-left: 0;
+  padding: 0;
+  font-family: "Neue Montreal Bold";
+  color: white;
 }
 
+.App::after {
+  animation: grain 8s steps(10) infinite;
+  background-image: url("./assets/grain.jpg");
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.1;
+  position: fixed;
+  top: -110%;
+  width: 300%;
+  z-index: -1;
+}
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--main-text) #2e2c3c; 
+  scrollbar-color: white darkgrey;
 }
 
-body {
-    display: grid;
-    overflow-x: hidden; 
-  
- 
-}
-
-body:hover{
-  cursor: pointer;
-}
-
-.flex {
-  display: flex;
-}
-
-.rage {
-  font-family: 'Road Rage';
-  text-shadow: 0 0 0.2rem #ffcc66, 0 0 0.5rem #ff9933;
-  box-sizing: border-box;
-  background: transparent;
-  color: var(--main-text);
-    margin-left: 10px;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-auto-columns: 1fr;
-  grid-template-areas:
-    'one'
-    'two'
-    'three'
-    'four'
-    'five'
-    'six'
-    'seven'
-    'eight'
-    'nine';
-
-  padding-block: 2rem;
-  width: min(95%, 70rem);
-  margin-inline: auto;
-  position: relative; 
-  z-index: 1; 
-
-}
-
-.grid-item {
-  border-radius: 0.5rem;
-}
-
-
-@media screen and (max-width: 30em) {
-  .grid {
-    grid-template-areas:
-      "one"
-      "two"
-      "three"
-      "six"
-      "four"
-      "five"
-      "eight"
-      "eight"
-      "nine"
-
-  }
-}
-
-
-
-@media screen and (min-width: 30em) {
-  .grid {
-    grid-template-areas:
-      "one one"
-      "two two"
-      "six six"
-      "four five"
-      "eight eight"
-      "nine nine";
-  }
-}
-
-@media screen and (min-width: 38em) {
-  .grid {
-    grid-template-areas:
-      "one one"
-      "two two"
-      "six six"
-      "four five"
-      "eight eight"
-      "nine nine";
-  }
-}
-
-@media screen and (min-width: 54em) {
-  .grid {
-    grid-template-areas:
-      "one one one"
-      "two two three"
-      "six six six"
-      "four seven five"
-      "nine eight eight";
-   
-  }
-}
-
-@media screen and (min-width: 75em) {
-  .grid {
-    grid-template-areas:
-      "one one one"
-      "two two three three"
-      "six six six six"
-      "four four five five"
-      "nine nine eight eight";
-     
-  }
+#particle-system-container {
+  position: fixed;
+  top: 0;
+  z-index: -1;
 }
