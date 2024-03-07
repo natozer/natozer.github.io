@@ -28,7 +28,7 @@ const CreditsSidebar = ({ setShowCredits }) => {
         </ul>
         <h4>MUSIC</h4>
         <ul>
-          <li>The Flashback - Grand_Project</li>
+          <li>Inspiring East -  Aleksey Chistilin from Pixabay</li>
         </ul>
         <h4>BACKGROUND PAINTING</h4>
         <ul>
