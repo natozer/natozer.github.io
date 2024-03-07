@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.8eac1bd4.css",
-    "main.js": "/static/js/main.ed77abbc.js",
-    "static/media/Road_Rage.otf": "/static/media/Road_Rage.03e8327bbbb7b1abbae9.otf",
-    "static/media/Cherish-Regular.ttf": "/static/media/Cherish-Regular.3719acfb907e4d3b2832.ttf",
-    "static/media/me.png": "/static/media/me.e42913fa2883e3ff2721.png",
-    "static/media/OT2049-Regular.otf": "/static/media/OT2049-Regular.8ca597fa289cd4dbd774.otf",
+    "main.css": "/static/css/main.ac6f9bd3.css",
+    "main.js": "/static/js/main.7de606d2.js",
+    "static/media/grain.jpg": "/static/media/grain.2ba38399b4dd9398e192.jpg",
+    "static/media/Migra-Extrabold.ttf": "/static/media/Migra-Extrabold.3c913ff79e001a1128c7.ttf",
+    "static/media/PPNeueMontreal-Medium.otf": "/static/media/PPNeueMontreal-Medium.0f34f4714f1b26e0dedc.otf",
+    "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
+    "static/media/mute.svg": "/static/media/mute.a5c8eb31805494aa2651e7dad761ff21.svg",
+    "static/media/unmute.svg": "/static/media/unmute.8a75f489fc94b82a15a3e462a5f01248.svg",
     "index.html": "/index.html",
-    "main.8eac1bd4.css.map": "/static/css/main.8eac1bd4.css.map",
-    "main.ed77abbc.js.map": "/static/js/main.ed77abbc.js.map"
+    "main.ac6f9bd3.css.map": "/static/css/main.ac6f9bd3.css.map",
+    "main.7de606d2.js.map": "/static/js/main.7de606d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.8eac1bd4.css",
-    "static/js/main.ed77abbc.js"
+    "static/css/main.ac6f9bd3.css",
+    "static/js/main.7de606d2.js"
   ]
 }
