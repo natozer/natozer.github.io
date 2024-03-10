@@ -7,6 +7,7 @@ function Header({ isPlaying, toggleMusic, onContactClick, onCreditsClick }) {
   return (
     <header className="App-header">
       <div>NATHANIEL ADDISON TOZER - FULL STACK WEB DEVELOPER</div>
+      <nav>
       <div className="navlink" onClick={onContactClick}>
         CONTACT
       </div>
@@ -16,6 +17,7 @@ function Header({ isPlaying, toggleMusic, onContactClick, onCreditsClick }) {
       <button onClick={toggleMusic}>
         {isPlaying ? <MuteIcon /> : <UnmuteIcon />}
       </button>
+      </nav>
     </header>
   );
 }

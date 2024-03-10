@@ -9,6 +9,7 @@ import Hero from './components/Hero';
 import Experience from './components/Experience';
 import MobileMessage from './components/MobileMessage';
 
+
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showCredits, setShowCredits] = useState(false);

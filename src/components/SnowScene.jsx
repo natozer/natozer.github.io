@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, forwardRef } from 'react';
+import React, { useEffect, useRef} from 'react';
 import * as THREE from 'three';
 import "../component_styles/CreditsSidebar.css";
 
-const SnowScene = forwardRef(() => {
+const SnowScene = (() => {
   const sceneRef = useRef(null);
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
