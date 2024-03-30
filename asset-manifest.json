@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.1ddf6774.css",
-    "main.js": "/static/js/main.a93dab4b.js",
+    "main.css": "/static/css/main.650334fb.css",
+    "main.js": "/static/js/main.a31aa351.js",
     "static/media/Migra-Extrabold.ttf": "/static/media/Migra-Extrabold.3c913ff79e001a1128c7.ttf",
     "static/media/PPNeueMontreal-Medium.otf": "/static/media/PPNeueMontreal-Medium.0f34f4714f1b26e0dedc.otf",
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
     "static/media/mute.svg": "/static/media/mute.a5c8eb31805494aa2651e7dad761ff21.svg",
     "static/media/unmute.svg": "/static/media/unmute.8a75f489fc94b82a15a3e462a5f01248.svg",
     "index.html": "/index.html",
-    "main.1ddf6774.css.map": "/static/css/main.1ddf6774.css.map",
-    "main.a93dab4b.js.map": "/static/js/main.a93dab4b.js.map"
+    "main.650334fb.css.map": "/static/css/main.650334fb.css.map",
+    "main.a31aa351.js.map": "/static/js/main.a31aa351.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ddf6774.css",
-    "static/js/main.a93dab4b.js"
+    "static/css/main.650334fb.css",
+    "static/js/main.a31aa351.js"
   ]
 }
