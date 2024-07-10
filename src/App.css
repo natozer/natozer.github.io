@@ -1,64 +1,67 @@
 @font-face {
-  font-family: "Migra Extra Bold";
-  src: url("fonts/Migra-Extrabold.ttf") format("truetype");
+  font-family: "Kayak";
+  src: url("fonts/Kayak\ Sans\ Regular.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "Neue Montreal";
-  src: url("fonts/PPNeueMontreal-Medium.otf") format("opentype");
+  font-family: "Ragna";
+  src: url("fonts/f24q220-ragna-ragna-regular-400.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: "Neue Montreal Bold";
-  src: url("fonts/PPNeueMontreal-Bold.otf") format("opentype");
-}
-
-@keyframes grain {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  20% {
-    transform: translate(-10%, 5%);
-  }
-  40% {
-    transform: translate(-5%, 10%);
-  }
-  60% {
-    transform: translate(10%, 0%);
-  }
-  80% {
-    transform: translate(3%, 8%);
-  }
+:root {
+  --main-white: #fffff4;
+  --main-black: #0e1111;
+  --main-dark-gray: #b7b7b7;
 }
 
 html,
 body {
   margin-left: 0;
-  padding: 0;
-  font-family: "Neue Montreal Bold";
-  color: white;
-}
-
-.App::after {
-  animation: grain 8s steps(10) infinite;
-  background-image: url("./assets/grain.jpg");
-  content: "";
-  height: 300%;
-  left: -50%;
-  opacity: 0.1;
-  position: fixed;
-  top: -110%;
-  width: 300%;
-  z-index: -1;
+  font-family: "Kayak", sans-serif;
+  color: var(--main-white);
+  user-select: none;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: white darkgrey;
+  scrollbar-color: var(--main-white) var(--main-black);
 }
 
 #particle-system-container {
   position: fixed;
   top: 0;
   z-index: -1;
+}
+
+.credits-button-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.credits-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000;
+  color: var(--main-dark-gray);
+  font-size: 0.6rem;
+}
+
+.credits-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 16px);
+  background: var(--main-white);
+  color: var(--main-black);
+  padding: 25px 0 25px 25px;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+.credits-button-container:hover .credits-container {
+  transform: translateY(0);
 }

@@ -1,60 +1,39 @@
 import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import '../component_styles/AboutMe.css'
-const AboutMe = () => {
-  const waveTextRef = useRef(null);
-  const paragraphRef = useRef(null);
+import { gsap } from 'gsap';
+import '../component_styles/AboutMe.css';
+
+const AboutMe = ({ hasEnteredSite }) => {
+  const h1Ref = useRef(null);
+  const h2Ref = useRef(null);
+  const imgRef = useRef(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    if (hasEnteredSite) {
+      const tl = gsap.timeline();
 
-    gsap.fromTo(
-      waveTextRef.current.children,
-      { autoAlpha: 0, y: 20 },
-      {
-        duration: 3,
-        autoAlpha: 1,
-        y: 0,
-        stagger: 0.6,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: waveTextRef.current,
-          start: "top 80%",
-          end: "bottom top",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-
-    
-    gsap.fromTo(
-      paragraphRef.current.children,
-      { autoAlpha: 0, y: 20 },
-      {
-        duration: 3,
-        autoAlpha: 1,
-        y: 0,
-        stagger: 0.6,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: paragraphRef.current,
-          start: "bottom bottom",
-          end: "bottom top",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  }, []);
+      tl.fromTo(h1Ref.current, 
+          { autoAlpha: 0, y: 20 }, 
+          { duration: 1, autoAlpha: 1, y: 0, ease: 'power2.out' }
+        )
+        .fromTo(imgRef.current, 
+          { autoAlpha: 0, y: 20 },
+          { duration: 1, autoAlpha: 1, y: 0, ease: 'power2.out', delay: 0.5 }, 
+          "+=0.1" 
+        )
+        .fromTo(h2Ref.current, 
+          { autoAlpha: 0, y: 20 },
+          { duration: 1, autoAlpha: 1, y: 0, ease: 'power2.out', delay: 0.5 }, 
+          "+=0.1" 
+        );
+    }
+  }, [hasEnteredSite]);
 
   return (
     <div className="AboutMe">
-      <div ref={paragraphRef} className='intro'>
-        <span>I'm a web developer from Miramichi, Canada.</span><span> I bring a wide range of front and back end skills to the table,</span> <span>and a relentless pursuit of perfection...</span>
-      </div>
-      <div ref={waveTextRef} className='Bold-Immersive-Memorable'>
-        <span>I'm all about</span><span> Bold,</span> <span>Immersive,</span> <span> and Memorable.</span>
-      </div>
+        <h1 ref={h1Ref}>Hi, I'm Nate.</h1>
+  
+        <h2 ref={h2Ref}>I'm a full stack web developer from Miramichi, Canada.</h2>
+      
     </div>
   );
 };

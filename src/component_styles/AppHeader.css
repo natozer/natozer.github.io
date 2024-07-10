@@ -1,53 +1,118 @@
+
 .App-header {
-  margin-left: 2em;
-  gap: 2em;
-  margin-top: 0.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.5em;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(236, 231, 231, 0.5) 100%
-  );
+  align-items: flex-start; 
+  font-size: 0.6rem;
+  color: var(--main-dark-gray);
+  margin: 0.5rem;
+
 }
 
-nav {
+.header-left {
+  align-self: flex-start; 
+  writing-mode: vertical-rl;
+  user-select: none;
+  font-size: 0.7rem;
+}
+
+.header-right {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 1em;
+  padding: 15px; 
+  margin-right: 1em;
 }
 
 .navlink {
-  transition: transform 0.3s ease, font-size 0.3s ease;
-  color: white;
-  margin-right: 10px;
+  color: #b7b7b7;
   text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+  font-weight: bolder;
 }
 
 .navlink:hover {
   transform: scale(1.1);
+  color: #e0e4e8;
   cursor: pointer;
 }
 
 button {
-  display: flex;
-  align-items: center;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-button svg {
-  fill: white;
-  width: 2rem;
-  height: 2rem;
+.visualizer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 20px;
+  width: 30px;
 }
 
-@media (max-width: 768px) {
-  .App-header {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5em;
-  }
+.bar {
+  width: 5px;
+  background-color: #b7b7b7;
+  border-radius: 2px;
+  height: 0; 
+  transition: background-color 0.3s; 
+}
+
+.bar:hover {
+  background-color: var(--main-yellow); 
+}
+
+
+@keyframes bounce {
+  from { height: 10%; }
+  to { height: 90%; }
+}
+
+.visualizer.playing .bar {
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.visualizer.playing .bar:nth-child(1) {
+  animation-name: bounce;
+  animation-duration: 0.8s;
+}
+
+.visualizer.playing .bar:nth-child(2) {
+  animation-name: bounce;
+  animation-duration: 0.5s;
+}
+
+.visualizer.playing .bar:nth-child(3) {
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+.visualizer.playing .bar:nth-child(4) {
+  animation-name: bounce;
+  animation-duration: 0.7s;
+}
+
+.visualizer.playing .bar:nth-child(5) {
+  animation-name: bounce;
+  animation-duration: 0.4s;
+}
+
+.vertical-stack {
+  display: inline-block; 
+  transform: rotate(270deg); 
+  margin: 3px; 
+
+}
+.vertical-stack:hover {
+ 
+  color: var(--main-white);;
+  
 }
