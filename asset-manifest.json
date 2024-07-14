@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.087aeb19.css",
-    "main.js": "/static/js/main.fbf749fd.js",
-    "static/media/piano.mp3": "/static/media/piano.8695ce032664c79bc7d6.mp3",
+    "main.css": "/static/css/main.9efa6e58.css",
+    "main.js": "/static/js/main.cd573753.js",
+    "static/media/gaia.mp3": "/static/media/gaia.d830fdaf7813ba0c68cf.mp3",
     "static/media/mobilepainting.png": "/static/media/mobilepainting.dfd73eb6a8f8c3e99ce6.png",
     "static/media/painting.jpg": "/static/media/painting.cae69f372c1fa69b25f0.jpg",
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
@@ -11,11 +11,11 @@
     "static/media/unmute.svg": "/static/media/unmute.cb63d2208671ca4314483aff7ad0fa01.svg",
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
-    "main.087aeb19.css.map": "/static/css/main.087aeb19.css.map",
-    "main.fbf749fd.js.map": "/static/js/main.fbf749fd.js.map"
+    "main.9efa6e58.css.map": "/static/css/main.9efa6e58.css.map",
+    "main.cd573753.js.map": "/static/js/main.cd573753.js.map"
   },
   "entrypoints": [
-    "static/css/main.087aeb19.css",
-    "static/js/main.fbf749fd.js"
+    "static/css/main.9efa6e58.css",
+    "static/js/main.cd573753.js"
   ]
 }
