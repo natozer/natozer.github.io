@@ -3,6 +3,14 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "../component_styles/Experience.css";
 
+const createSpanElements = (text, className) => {
+  return text.split('').map((char, index) => (
+    <span key={index} className={className}>
+      {char}
+    </span>
+  ));
+};
+
 const Experience = () => {
   const experienceRef = useRef(null);
 
@@ -12,7 +20,7 @@ const Experience = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: experienceRef.current,
-        start: "top 50%", 
+        start: "top 88%",
         end: "bottom top",
         toggleActions: "play none none reverse",
       }
@@ -22,10 +30,10 @@ const Experience = () => {
       experienceRef.current.querySelectorAll(".expertise"),
       { autoAlpha: 0, y: 20 },
       {
-        duration: 1,
+        duration: 0.2,
         autoAlpha: 1,
         y: 0,
-        stagger: 0.05,
+        stagger: 0.01,
         ease: "power2.out"
       }
     );
@@ -36,34 +44,17 @@ const Experience = () => {
       {
         autoAlpha: 1,
         y: 0,
-        stagger: 0.10,
+        stagger: 0.05,
         ease: "expo.out",
-        duration: 1.5
-      }
-    );
-
-    tl.fromTo(
-      experienceRef.current.querySelectorAll(".bold-words"),
-      { autoAlpha: 0, y: 30 },
-      {
-        autoAlpha: 1,
-        y: 0,
-        stagger: 0.10,
-        ease: "expo.out",
-        duration: 1.2
+        duration: 1
       }
     );
   }, []);
 
   return (
     <div className="experience-section" ref={experienceRef}>
-
       <h1>
-        {["E", "X", "P", "E", "R", "I", "E", "N", "C", "E", " ", "I", "N"].map((item, index) => (
-          <span key={index} className="expertise">
-            {item}
-          </span>
-        ))}
+        {createSpanElements("I HAVE EXPERIENCE WITH...", "expertise")}
       </h1>
       <ul>
         <li>ANGULAR</li>
@@ -82,14 +73,6 @@ const Experience = () => {
         <li>REACT</li>
         <li>TYPESCRIPT</li>
       </ul>
-
-      <h2>
-        {["I ", "do ", "Bold, ", "Memorable, ", "and ", "Immersive"].map((word, index) => (
-          <span key={index} className="bold-words">
-            {word} 
-          </span>
-        ))}
-      </h2>
     </div>
   );
 };

@@ -3,8 +3,8 @@ import React, { useEffect, useRef } from "react";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js";
-import snowBackground from '../assets/aurora.jpg';
-import croppedAurora from '../assets/cropped_aurora.jpg'; 
+import snowBackground from '../assets/painting.jpg';
+import croppedAurora from '../assets/mobilepainting.png'; 
 import snowflake1 from '../assets/snowflake1.png';
 import snowflake2 from '../assets/snowflake2.png';
 import snowflake3 from '../assets/snowflake3.png';
@@ -50,7 +50,7 @@ const SnowScene = () => {
     const renderPass = new RenderPass(scene, camera);
     composer.addPass(renderPass);
 
-    const filmPass = new FilmPass(0.8, 0.05, 648, false);
+    const filmPass = new FilmPass(0.5, 0.05, 648, false);
     composer.addPass(filmPass);
 
 
@@ -58,9 +58,9 @@ const SnowScene = () => {
     const snowflakeTextures = snowflakeImages.map(image => textureLoader.load(image));
 
     const geometry = new THREE.BufferGeometry();
-    const vertices = new Array(6000);
+    const vertices = new Array(9000);
 
-    for (let i = 0; i < 2000; i++) {
+    for (let i = 0; i < 3000; i++) {
       const baseIndex = i * 3;
       const x = Math.random() * 2000 - 1000;
       const y = Math.random() * 2000 - 1000;
@@ -115,8 +115,8 @@ const SnowScene = () => {
           let directionMultiplier = i % 2 === 0 ? 1 : -1;
           object.rotation.y = time * (i + 1) * directionMultiplier;
           object.rotation.z = time * directionMultiplier;
-          object.position.x = Math.sin(time + i) * 20 * directionMultiplier;
-          object.position.y = Math.cos(time + i) * 20;
+          object.position.x = Math.sin(time + i) * 4 * directionMultiplier;
+          object.position.y = Math.cos(time + i) * 6;
         }
       });
 

@@ -1,62 +1,37 @@
 .AboutMe {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-  margin: 2rem 6rem;
-  border-bottom: solid var(--main-dark-grey) 2px;
-  font-size: 2.5rem;
+  text-align: left;
+  letter-spacing: 1px;
+  color: var(--main-yellow);
+  font-family: "Neue Montreal Bold", sans-serif;
   text-transform: uppercase;
-  text-shadow: 0 0 0.1rem var(--main-white);
+  font-weight: 900;
   opacity: 0.7;
-
+  visibility: hidden;
 }
 
-
-.AboutMe h1{
-  font-size: 10rem;
-  opacity: 0.5;
-  text-shadow: 0 0 0.1rem var(--main-white), 0 0 0.3rem white;
-  font-family: 'Ragna';
-}
-
-
-
-@media (max-width: 400px) {
+@media (max-width: 444px) {
   .AboutMe {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    text-align: center;
-    gap: 1rem;
-    margin: 1rem 2rem;
+    font-size: 1rem;
+    margin: 1rem 3rem;
   }
+}
 
+@media (max-width: 790px) {
+  .AboutMe {
+    font-size: 0.8rem;
+    margin: 2rem 3rem;
+  }
+}
 
-  .AboutMe h1{
+@media (min-width: 1024px) {
+  .AboutMe {
+    font-size: 2rem;
+    margin: 2rem 6rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .AboutMe {
     font-size: 3rem;
   }
-
-
 }
-
-@media (max-width: 800px) {
-  .AboutMe {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    text-align: center;
-    gap: 1rem;
-    margin: 1rem 2rem;
-  }
-
-  .AboutMe h1{
-    font-size: 4rem;
-  }
-
-  .AboutMe h2{
-    font-size: 2rem;
-  }
-
-}
-

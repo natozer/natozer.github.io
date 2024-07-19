@@ -1,45 +1,62 @@
-
-.App-header {
+.header-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.App-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
-  font-size: 0.6rem;
-  color: var(--main-dark-gray);
-  margin: 0.5rem;
+  align-items: flex-start;
+  font-size: 0.7rem;
+  color: var(--main-gray);
+  font-weight: bold;
 
 }
 
 .header-left {
-  align-self: flex-start; 
+  align-self: flex-start;
   writing-mode: vertical-rl;
   user-select: none;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+  font-family: "BTSuave";
 }
 
 .header-right {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1em;
-  padding: 15px; 
-  margin-right: 1em;
+  gap: 0.8rem;
+  margin: 1.5rem;
+
 }
 
-.navlink {
-  color: #b7b7b7;
+@media (max-width: 600px) {
+  .header-right{
+  margin: 1rem;
+  }
+}
+
+
+.header-right a {
+  display: inline-block;
+  color: inherit;
   text-decoration: none;
-  transition: transform 0.3s ease-in-out;
-  font-weight: bolder;
+  transition: transform 0.3s ease;
 }
 
-.navlink:hover {
+.header-right a:hover {
   transform: scale(1.1);
-  color: #e0e4e8;
-  cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  .header-left {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+  }
 }
 
 button {
@@ -58,20 +75,23 @@ button {
 
 .bar {
   width: 5px;
-  background-color: #b7b7b7;
+  background-color: var(--main-gray);
   border-radius: 2px;
-  height: 0; 
-  transition: background-color 0.3s; 
+  height: 0;
+  transition: background-color 0.3s;
 }
 
 .bar:hover {
-  background-color: var(--main-yellow); 
+  background-color: var(--light-yellow);
 }
 
-
 @keyframes bounce {
-  from { height: 10%; }
-  to { height: 90%; }
+  from {
+    height: 10%;
+  }
+  to {
+    height: 90%;
+  }
 }
 
 .visualizer.playing .bar {
@@ -106,13 +126,10 @@ button {
 }
 
 .vertical-stack {
-  display: inline-block; 
-  transform: rotate(270deg); 
-  margin: 3px; 
-
+  display: inline-block;
+  transform: rotate(270deg);
+  margin: 3px;
 }
 .vertical-stack:hover {
- 
-  color: var(--main-white);;
-  
+  color: var(--light-yellow);
 }

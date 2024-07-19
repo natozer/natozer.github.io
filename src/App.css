@@ -1,30 +1,41 @@
-@font-face {
-  font-family: "Kayak";
-  src: url("fonts/Kayak\ Sans\ Regular.otf") format("opentype");
-}
 
 @font-face {
-  font-family: "Ragna";
-  src: url("fonts/f24q220-ragna-ragna-regular-400.ttf") format("truetype");
+  font-family: "Neue Montreal Bold";
+  src: url("fonts/PPNeueMontreal-Bold.otf") format("opentype");
 }
+
+
+
+@font-face {
+  font-family: 'BTSuave';
+  src: url('fonts/BTSuave-Bold.otf') format('opentype');
+}
+
+
+
 
 :root {
-  --main-white: #fffff4;
-  --main-black: #0e1111;
-  --main-dark-gray: #b7b7b7;
+  --main-yellow:  #FDF4E3;
+  --main-black: #141414;
+  --main-gray: #bac4b8;
+  --light-yellow: #e0c8a4;
 }
+
 
 html,
 body {
-  margin-left: 0;
-  font-family: "Kayak", sans-serif;
-  color: var(--main-white);
-  user-select: none;
+  margin: 0;
+  padding: 0;
+ font-family: "Neue Montreal Bold";
+ color: var(--main-yellow);
+ user-select: none;
+
 }
+
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--main-white) var(--main-black);
+  scrollbar-color: var(--main-yellow) var(--main-black);
 }
 
 #particle-system-container {
@@ -43,25 +54,32 @@ body {
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1000; 
   color: var(--main-dark-gray);
-  font-size: 0.6rem;
+  font-family: 'BTSuave';  
+  font-size: 0.7rem;
 }
 
 .credits-container {
+  font-family: 'BTSuave';  
+  font-weight: bolder;
   position: fixed;
   bottom: 0;
   left: 0;
-  width: calc(100% - 16px);
-  background: var(--main-white);
+  width: calc(100% - 16px); 
+  background: var(--main-yellow);
   color: var(--main-black);
-  padding: 25px 0 25px 25px;
-  transform: translateY(100%);
+  padding: 25px 0 25px 25px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(100%); 
   transition: transform 0.5s ease-in-out;
-  pointer-events: none;
+  pointer-events: none; 
   font-size: 0.8rem;
+
 }
 
 .credits-button-container:hover .credits-container {
-  transform: translateY(0);
+  transform: translateY(0); 
 }
