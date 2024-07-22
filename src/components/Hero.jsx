@@ -10,11 +10,7 @@ const Hero = () => {
   const scrollIndicatorRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(heroRef.current, 
-      { autoAlpha: 0},  
-      { duration: 2.5, autoAlpha: 1, y: 0, ease: "power2.out" }
-    );
-
+ 
     gsap.set(scrollIndicatorRef.current, { autoAlpha: 1 });
 
     ScrollTrigger.create({

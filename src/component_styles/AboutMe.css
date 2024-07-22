@@ -5,8 +5,9 @@
   font-family: "Neue Montreal Bold", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
-  opacity: 0.7;
+  opacity: 0.9;
   visibility: hidden;
+
 }
 
 @media (max-width: 444px) {

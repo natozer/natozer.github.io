@@ -72,7 +72,7 @@ const Experience = () => {
         <li>NODE.JS</li>
         <li>REACT</li>
         <li>TYPESCRIPT</li>
-      </ul>
+      </ul>      
     </div>
   );
 };

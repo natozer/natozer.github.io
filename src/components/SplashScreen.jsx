@@ -12,16 +12,11 @@ function SplashScreen({ onEnterSite }) {
 
   return (
     <div className="splash-screen">
-          <div className="splash-overlay"/>
-
+      <div className="splash-overlay" />
       <div className="splash-header">
-        {" "}
         {renderTextWithSpan("NATHANIEL TOZER 2024 ")}
       </div>
-      <h2>FULL STACK</h2>
-      <h1>NATHANIEL TOZER</h1>
-      <h2>WEB DEVELOPER</h2>  
-     
+      
       <button onClick={onEnterSite}>Enter Site</button>
     </div>
   );

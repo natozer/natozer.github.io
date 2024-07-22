@@ -9,6 +9,7 @@ import SplashScreen from './components/SplashScreen';
 import backgroundMusic from './assets/gaia.mp3';
 import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
+import Credits from './components/Credits'; 
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -46,6 +47,7 @@ function App() {
   return (
     <div className="App">
       <SnowScene />
+
       {splashScreenVisible ? (
         <SplashScreen onEnterSite={handleEnterSite} />
       ) : (
@@ -55,14 +57,9 @@ function App() {
           <AboutMe />
           <Experience />
           <Footer />
+          <Credits /> 
         </>
       )}
-      <div className="credits-button-container">
-        <div className="credits-button">CREDITS</div>
-        <div className="credits-container">
-          <span>Fonts are PPNeue Montreal and BTSuave. This site is a personal demo project. No money is being made through this site.</span>
-        </div>
-      </div>
     </div>
   );
 }

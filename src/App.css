@@ -38,7 +38,7 @@ body {
   scrollbar-color: var(--main-yellow) var(--main-black);
 }
 
-#particle-system-container {
+#snow-scene-container {
   position: fixed;
   top: 0;
   z-index: -1;

@@ -3,17 +3,23 @@
 .experience-section {
   user-select: none;
   margin: 4rem 6rem;
-  opacity: 0.7;
+  opacity: 0.9;
 
 }
 
-.experience-section h1, .experience-section h2 {
+.experience-section h1 {
   text-transform: uppercase;
   font-family: 'BTSuave';
   font-weight: 900;
   margin-bottom: 0;
   font-size: 1rem;
 }
+
+.experience-section h2{
+  font-family: "Neue Montreal Bold";
+  text-transform: uppercase;
+}
+  
 
 
 .experience-section ul {

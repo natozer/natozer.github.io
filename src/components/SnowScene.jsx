@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js";
-import snowBackground from '../assets/painting.jpg';
+import ApothesisOfHercules from '../assets/ApotheosisOfHercules.jpg';
 import croppedAurora from '../assets/mobilepainting.png'; 
 import snowflake1 from '../assets/snowflake1.png';
 import snowflake2 from '../assets/snowflake2.png';
@@ -30,7 +30,7 @@ const SnowScene = () => {
     const textureLoader = new THREE.TextureLoader();
 
     const isMobile = window.innerWidth / window.innerHeight > 1 ? false : true;
-    const backgroundTexture = textureLoader.load(isMobile ? croppedAurora : snowBackground);
+    const backgroundTexture = textureLoader.load(isMobile ? croppedAurora : ApothesisOfHercules);
     scene.background = backgroundTexture;
 
     scene.fog = new THREE.FogExp2(0x000000, 0.00006);
@@ -40,7 +40,7 @@ const SnowScene = () => {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     document
-      .getElementById("particle-system-container")
+      .getElementById("snow-scene-container")
       .appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
@@ -50,9 +50,8 @@ const SnowScene = () => {
     const renderPass = new RenderPass(scene, camera);
     composer.addPass(renderPass);
 
-    const filmPass = new FilmPass(0.5, 0.05, 648, false);
+    const filmPass = new FilmPass(0.5, 0.05, 6100, false);
     composer.addPass(filmPass);
-
 
     const snowflakeImages = [snowflake1, snowflake2, snowflake3];
     const snowflakeTextures = snowflakeImages.map(image => textureLoader.load(image));
@@ -92,8 +91,12 @@ const SnowScene = () => {
         });
 
         const particles = new THREE.Points(geometry, material);
+        particles.rotation.x = Math.random() * 6;
+        particles.rotation.y = Math.random() * 6;
+        particles.rotation.z = Math.random() * 6;
         scene.add(particles);
       });
+
     });
 
     function onWindowResize() {
@@ -102,21 +105,18 @@ const SnowScene = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
 
       const isMobile = window.innerWidth / window.innerHeight > 1 ? false : true;
-      scene.background = textureLoader.load(isMobile ? croppedAurora : snowBackground);
+      scene.background = textureLoader.load(isMobile ? croppedAurora : ApothesisOfHercules);
     }
 
     window.addEventListener("resize", onWindowResize);
 
     function animate() {
       requestAnimationFrame(animate);
-      let time = Date.now() * 0.00001;
+      const time = Date.now() * 0.000009;
+
       scene.children.forEach((object, i) => {
         if (object instanceof THREE.Points) {
-          let directionMultiplier = i % 2 === 0 ? 1 : -1;
-          object.rotation.y = time * (i + 1) * directionMultiplier;
-          object.rotation.z = time * directionMultiplier;
-          object.position.x = Math.sin(time + i) * 4 * directionMultiplier;
-          object.position.y = Math.cos(time + i) * 6;
+          object.rotation.y = time * (i < 4 ? i + 1 : -(i + 1));
         }
       });
 
@@ -127,13 +127,13 @@ const SnowScene = () => {
 
     return () => {
       document
-        .getElementById("particle-system-container")
+        .getElementById("snow-scene-container")
         .removeChild(renderer.domElement);
       window.removeEventListener("resize", onWindowResize);
     };
   }, []);
 
-  return <div id="particle-system-container" />;
+  return <div id="snow-scene-container" />;
 };
 
 export default SnowScene;
