@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.17a72e69.css",
-    "main.js": "/static/js/main.b84ac30f.js",
+    "main.js": "/static/js/main.53914488.js",
     "static/media/mobilepainting.png": "/static/media/mobilepainting.dfd73eb6a8f8c3e99ce6.png",
     "static/media/gaia.mp3": "/static/media/gaia.428023e3b07c10ca470c.mp3",
     "static/media/ApotheosisOfHercules.jpg": "/static/media/ApotheosisOfHercules.c56a7ebae0a17868c463.jpg",
@@ -12,10 +12,10 @@
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
     "main.17a72e69.css.map": "/static/css/main.17a72e69.css.map",
-    "main.b84ac30f.js.map": "/static/js/main.b84ac30f.js.map"
+    "main.53914488.js.map": "/static/js/main.53914488.js.map"
   },
   "entrypoints": [
     "static/css/main.17a72e69.css",
-    "static/js/main.b84ac30f.js"
+    "static/js/main.53914488.js"
   ]
 }
