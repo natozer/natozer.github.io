@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.238d7eb5.css",
-    "main.js": "/static/js/main.74b651f7.js",
+    "main.css": "/static/css/main.5144b842.css",
+    "main.js": "/static/js/main.a450f8c1.js",
     "static/media/gaia.mp3": "/static/media/gaia.5149225340ec6592358b.mp3",
     "static/media/mobilepainting.png": "/static/media/mobilepainting.dfd73eb6a8f8c3e99ce6.png",
     "static/media/ApotheosisOfHercules.jpg": "/static/media/ApotheosisOfHercules.c56a7ebae0a17868c463.jpg",
@@ -11,11 +11,11 @@
     "static/media/unmute.svg": "/static/media/unmute.ef97db85c2cacaa92270cbdd561c2fa6.svg",
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
-    "main.238d7eb5.css.map": "/static/css/main.238d7eb5.css.map",
-    "main.74b651f7.js.map": "/static/js/main.74b651f7.js.map"
+    "main.5144b842.css.map": "/static/css/main.5144b842.css.map",
+    "main.a450f8c1.js.map": "/static/js/main.a450f8c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.238d7eb5.css",
-    "static/js/main.74b651f7.js"
+    "static/css/main.5144b842.css",
+    "static/js/main.a450f8c1.js"
   ]
 }
