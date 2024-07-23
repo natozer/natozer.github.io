@@ -14,10 +14,9 @@
   font-family: "Neue Montreal Bold";
   text-transform: uppercase;
   backdrop-filter: blur(15px); 
-  transition: opacity 1s ease-out;
+  transition: opacity 2s ease-out;
   overflow: hidden;
 }
-
 
 .splash-header {
   position: absolute;
@@ -43,6 +42,7 @@
   padding: 10px 20px;
   position: relative;
   overflow: hidden;
+  transition: opacity 0.5s ease;
 }
 
 .splash-screen button::after {
@@ -58,6 +58,10 @@
 
 .splash-screen button:hover::after {
   width: 100%;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 @media (max-width: 600px) {

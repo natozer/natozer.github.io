@@ -69,10 +69,8 @@ body {
   width: calc(100% - 16px); 
   background: var(--main-yellow);
   color: var(--main-black);
-  padding: 25px 0 25px 25px; 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 25px; 
+
   transform: translateY(100%); 
   transition: transform 0.5s ease-in-out;
   pointer-events: none; 

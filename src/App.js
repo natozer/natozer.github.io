@@ -14,6 +14,7 @@ import Credits from './components/Credits';
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [splashScreenVisible, setSplashScreenVisible] = useState(true);
+  const [buttonVisible, setButtonVisible] = useState(true);
 
   const audioRef = useRef(new Audio(backgroundMusic));
   audioRef.current.loop = true;
@@ -33,7 +34,8 @@ function App() {
     if (!isPlaying) {
       toggleMusic();
     }
-    gsap.to(splashScreenRef.current, { duration: 1, opacity: 0, onComplete: () => setSplashScreenVisible(false) });
+    setButtonVisible(false);
+    gsap.to(splashScreenRef.current, { duration: 2, opacity: 0, onComplete: () => setSplashScreenVisible(false) });
   };
 
   useEffect(() => {
@@ -49,7 +51,7 @@ function App() {
       <SnowScene />
 
       {splashScreenVisible ? (
-        <SplashScreen onEnterSite={handleEnterSite} />
+        <SplashScreen onEnterSite={handleEnterSite} buttonVisible={buttonVisible} splashScreenRef={splashScreenRef} />
       ) : (
         <>
           <Header isPlaying={isPlaying} toggleMusic={toggleMusic} />
