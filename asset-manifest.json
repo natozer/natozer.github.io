@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.f5bf4d1c.css",
-    "main.js": "/static/js/main.f0136952.js",
+    "main.js": "/static/js/main.51fd25e7.js",
     "static/media/mobilepainting.png": "/static/media/mobilepainting.dfd73eb6a8f8c3e99ce6.png",
-    "static/media/gaia.mp3": "/static/media/gaia.ae6f4a29a8e0671835e1.mp3",
+    "static/media/gaia.mp3": "/static/media/gaia.d46694e92b65b7284d3d.mp3",
     "static/media/ApotheosisOfHercules.jpg": "/static/media/ApotheosisOfHercules.c56a7ebae0a17868c463.jpg",
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
     "static/media/BTSuave-Bold.otf": "/static/media/BTSuave-Bold.6ece5f7b28dc5c5a345b.otf",
@@ -12,10 +12,10 @@
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
     "main.f5bf4d1c.css.map": "/static/css/main.f5bf4d1c.css.map",
-    "main.f0136952.js.map": "/static/js/main.f0136952.js.map"
+    "main.51fd25e7.js.map": "/static/js/main.51fd25e7.js.map"
   },
   "entrypoints": [
     "static/css/main.f5bf4d1c.css",
-    "static/js/main.f0136952.js"
+    "static/js/main.51fd25e7.js"
   ]
 }
