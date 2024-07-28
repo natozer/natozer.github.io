@@ -50,13 +50,6 @@ const AboutMe = () => {
           relentless pursuit of perfection.
         </h3>
       </div>
-
-      <div ref={(el) => (headersRef.current[3] = el)}>
-        <h3> Whether you're looking for modern, prestige web design or need help constructing the perfect SQL command. I've got you covered.
-
-        </h3>
-
-      </div>
     </div>
   );
 };

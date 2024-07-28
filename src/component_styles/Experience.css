@@ -4,6 +4,7 @@
   user-select: none;
   margin: 4rem 6rem;
   opacity: 0.9;
+  backdrop-filter: blur(10px); 
 
 }
 

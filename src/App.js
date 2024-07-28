@@ -35,7 +35,7 @@ function App() {
       toggleMusic();
     }
     setButtonVisible(false);
-    gsap.to(splashScreenRef.current, { duration: 2, opacity: 0, onComplete: () => setSplashScreenVisible(false) });
+    gsap.to(splashScreenRef.current, { duration: 3, opacity: 0, onComplete: () => setSplashScreenVisible(false) });
   };
 
   useEffect(() => {
@@ -49,13 +49,13 @@ function App() {
   return (
     <div className="App">
       <SnowScene />
+          <Hero />
 
       {splashScreenVisible ? (
         <SplashScreen onEnterSite={handleEnterSite} buttonVisible={buttonVisible} splashScreenRef={splashScreenRef} />
       ) : (
         <>
           <Header isPlaying={isPlaying} toggleMusic={toggleMusic} />
-          <Hero />
           <AboutMe />
           <Experience />
           <Footer />

@@ -1,11 +1,12 @@
 .AboutMe {
   text-align: left;
   letter-spacing: 1px;
-  color: var(--main-yellow);
+  color: var(--main-gray);
   font-family: "Neue Montreal Bold", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
   opacity: 0.9;
+  backdrop-filter: blur(10px); 
 
 }
 

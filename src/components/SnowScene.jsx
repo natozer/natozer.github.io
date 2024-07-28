@@ -57,9 +57,9 @@ const SnowScene = () => {
     const snowflakeTextures = snowflakeImages.map(image => textureLoader.load(image));
 
     const geometry = new THREE.BufferGeometry();
-    const vertices = new Array(9000);
+    const vertices = new Array(21000);
 
-    for (let i = 0; i < 3000; i++) {
+    for (let i = 0; i < 7000; i++) {
       const baseIndex = i * 3;
       const x = Math.random() * 2000 - 1000;
       const y = Math.random() * 2000 - 1000;
