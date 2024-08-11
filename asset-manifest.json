@@ -1,28 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.b84295a7.css",
-    "main.js": "/static/js/main.5a876225.js",
-    "static/media/texture3.jpg": "/static/media/texture3.786c89e9bbb93b2f33f3.jpg",
+    "main.css": "/static/css/main.6e93956f.css",
+    "main.js": "/static/js/main.9b1262d6.js",
     "static/media/music.mp3": "/static/media/music.5c06e6ba064da9127144.mp3",
-    "static/media/texture1.jpg": "/static/media/texture1.4a27a8f02b16a67716d3.jpg",
     "static/media/texture9.jpg": "/static/media/texture9.23c76fb83c2235abb04d.jpg",
-    "static/media/texture2.jpg": "/static/media/texture2.ae6e27d477ed2cb57264.jpg",
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
     "static/media/SpaceMono-Regular.ttf": "/static/media/SpaceMono-Regular.8a2aa304d0bd5e41d186.ttf",
     "static/media/OverglowFont-Demo.otf": "/static/media/OverglowFont-Demo.a6cc0dbebfe6f842a69a.otf",
     "static/media/NeueMontreal-Medium.otf": "/static/media/NeueMontreal-Medium.15b1070b8dac57958acf.otf",
-    "static/media/texture5.jpg": "/static/media/texture5.19b1e26f4d94d12a7ff8.jpg",
     "static/media/Moria.ttf": "/static/media/Moria.93fcd12c2607cabae4b1.ttf",
     "static/media/mute.svg": "/static/media/mute.1bb6bcb02ddfb720558935c5d1eec545.svg",
     "static/media/unmute.svg": "/static/media/unmute.dfa5ad01e34cd72ebc74107ddc55405c.svg",
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
     "static/media/down.svg": "/static/media/down.71a6a99b85e903d014acf370b46619db.svg",
-    "main.b84295a7.css.map": "/static/css/main.b84295a7.css.map",
-    "main.5a876225.js.map": "/static/js/main.5a876225.js.map"
+    "main.6e93956f.css.map": "/static/css/main.6e93956f.css.map",
+    "main.9b1262d6.js.map": "/static/js/main.9b1262d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.b84295a7.css",
-    "static/js/main.5a876225.js"
+    "static/css/main.6e93956f.css",
+    "static/js/main.9b1262d6.js"
   ]
 }
