@@ -1,9 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.6e93956f.css",
-    "main.js": "/static/js/main.4eaded45.js",
+    "main.js": "/static/js/main.23b9da3b.js",
     "static/media/music.mp3": "/static/media/music.fb297637ab0ea276b9dc.mp3",
+    "static/media/texture2.jpg": "/static/media/texture2.8be034e66ffa94eb1410.jpg",
     "static/media/texture9.jpg": "/static/media/texture9.23c76fb83c2235abb04d.jpg",
+    "static/media/texture3.jpg": "/static/media/texture3.8dee3f32de30e79c50cb.jpg",
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
     "static/media/SpaceMono-Regular.ttf": "/static/media/SpaceMono-Regular.8a2aa304d0bd5e41d186.ttf",
     "static/media/OverglowFont-Demo.otf": "/static/media/OverglowFont-Demo.a6cc0dbebfe6f842a69a.otf",
@@ -15,10 +17,10 @@
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
     "static/media/down.svg": "/static/media/down.71a6a99b85e903d014acf370b46619db.svg",
     "main.6e93956f.css.map": "/static/css/main.6e93956f.css.map",
-    "main.4eaded45.js.map": "/static/js/main.4eaded45.js.map"
+    "main.23b9da3b.js.map": "/static/js/main.23b9da3b.js.map"
   },
   "entrypoints": [
     "static/css/main.6e93956f.css",
-    "static/js/main.4eaded45.js"
+    "static/js/main.23b9da3b.js"
   ]
 }
