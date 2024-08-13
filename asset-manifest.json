@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8ae70d2b.css",
-    "main.js": "/static/js/main.cfe42258.js",
+    "main.css": "/static/css/main.fa0201ca.css",
+    "main.js": "/static/js/main.08b7ed65.js",
     "static/media/music.mp3": "/static/media/music.bec5be8f4cbec5a1876c.mp3",
     "static/media/Road_Rage.otf": "/static/media/Road_Rage.03e8327bbbb7b1abbae9.otf",
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
@@ -13,11 +13,11 @@
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
     "static/media/down.svg": "/static/media/down.71a6a99b85e903d014acf370b46619db.svg",
-    "main.8ae70d2b.css.map": "/static/css/main.8ae70d2b.css.map",
-    "main.cfe42258.js.map": "/static/js/main.cfe42258.js.map"
+    "main.fa0201ca.css.map": "/static/css/main.fa0201ca.css.map",
+    "main.08b7ed65.js.map": "/static/js/main.08b7ed65.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ae70d2b.css",
-    "static/js/main.cfe42258.js"
+    "static/css/main.fa0201ca.css",
+    "static/js/main.08b7ed65.js"
   ]
 }
