@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.b32665e0.css",
-    "main.js": "/static/js/main.45e6d3fe.js",
-    "static/media/music.mp3": "/static/media/music.92765f10a48bd6ceef09.mp3",
+    "main.css": "/static/css/main.4f9da047.css",
+    "main.js": "/static/js/main.918d1fdf.js",
+    "static/media/music.mp3": "/static/media/music.b09ca02fc6cc23c10160.mp3",
+    "static/media/Indelible.otf": "/static/media/Indelible.2b09f2237f1b0452c98a.otf",
     "static/media/Road_Rage.otf": "/static/media/Road_Rage.03e8327bbbb7b1abbae9.otf",
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
     "static/media/SpaceMono-Regular.ttf": "/static/media/SpaceMono-Regular.8a2aa304d0bd5e41d186.ttf",
     "static/media/bass_drop.mp3": "/static/media/bass_drop.ec2390de1908a0f2f6e9.mp3",
     "static/media/NeueMontreal-Medium.otf": "/static/media/NeueMontreal-Medium.15b1070b8dac57958acf.otf",
+    "static/media/Moria.ttf": "/static/media/Moria.93fcd12c2607cabae4b1.ttf",
     "static/media/mute.svg": "/static/media/mute.1bb6bcb02ddfb720558935c5d1eec545.svg",
     "static/media/unmute.svg": "/static/media/unmute.dfa5ad01e34cd72ebc74107ddc55405c.svg",
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
     "static/media/down.svg": "/static/media/down.71a6a99b85e903d014acf370b46619db.svg",
-    "main.b32665e0.css.map": "/static/css/main.b32665e0.css.map",
-    "main.45e6d3fe.js.map": "/static/js/main.45e6d3fe.js.map"
+    "main.4f9da047.css.map": "/static/css/main.4f9da047.css.map",
+    "main.918d1fdf.js.map": "/static/js/main.918d1fdf.js.map"
   },
   "entrypoints": [
-    "static/css/main.b32665e0.css",
-    "static/js/main.45e6d3fe.js"
+    "static/css/main.4f9da047.css",
+    "static/js/main.918d1fdf.js"
   ]
 }
