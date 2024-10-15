@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7df21cc0.css",
-    "main.js": "/static/js/main.a13938cb.js",
+    "main.css": "/static/css/main.e748c272.css",
+    "main.js": "/static/js/main.a62d6453.js",
     "static/media/music.mp3": "/static/media/music.b09ca02fc6cc23c10160.mp3",
     "static/media/Indelible.otf": "/static/media/Indelible.2b09f2237f1b0452c98a.otf",
     "static/media/Road_Rage.otf": "/static/media/Road_Rage.03e8327bbbb7b1abbae9.otf",
@@ -15,11 +15,11 @@
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
     "static/media/down.svg": "/static/media/down.71a6a99b85e903d014acf370b46619db.svg",
-    "main.7df21cc0.css.map": "/static/css/main.7df21cc0.css.map",
-    "main.a13938cb.js.map": "/static/js/main.a13938cb.js.map"
+    "main.e748c272.css.map": "/static/css/main.e748c272.css.map",
+    "main.a62d6453.js.map": "/static/js/main.a62d6453.js.map"
   },
   "entrypoints": [
-    "static/css/main.7df21cc0.css",
-    "static/js/main.a13938cb.js"
+    "static/css/main.e748c272.css",
+    "static/js/main.a62d6453.js"
   ]
 }
