@@ -6,10 +6,10 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
-import backgroundMusic from './assets/gaia.mp3';
+import backgroundMusic from './assets/music.mp3';
 import AboutMe from './components/AboutMe';
-import Experience from './components/Experience';
-import Credits from './components/Credits'; 
+import Credits from './components/Credits';
+import Words from './components/Words';
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -49,19 +49,21 @@ function App() {
   return (
     <div className="App">
       <SnowScene />
-          <Hero />
-
+      <Hero />
       {splashScreenVisible ? (
         <SplashScreen onEnterSite={handleEnterSite} buttonVisible={buttonVisible} splashScreenRef={splashScreenRef} />
       ) : (
         <>
           <Header isPlaying={isPlaying} toggleMusic={toggleMusic} />
-          <AboutMe />
-          <Experience />
-          <Footer />
-          <Credits /> 
+          <div className='wrapper'>
+            <AboutMe />
+            <Words />
+            <Footer />
+            <Credits />
+          </div>
         </>
       )}
+
     </div>
   );
 }

@@ -2,18 +2,25 @@ import * as THREE from "three";
 import React, { useEffect, useRef } from "react";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass.js";
 import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js";
-import ApothesisOfHercules from '../assets/ApotheosisOfHercules.jpg';
-import croppedAurora from '../assets/mobilepainting.png'; 
-import snowflake1 from '../assets/snowflake1.png';
-import snowflake2 from '../assets/snowflake2.png';
-import snowflake3 from '../assets/snowflake3.png';
+import snowflake1 from "../assets/snowflake1.png";
+import snowflake2 from "../assets/snowflake2.png";
+import snowflake3 from "../assets/snowflake3.png";
+import apotheosis from "../assets/apotheosis.png";
+import apotheosis_mobile from "../assets/apotheosis_mobile.png";
 
 const SnowScene = () => {
   const sceneRef = useRef(null);
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
   const composerRef = useRef(null);
+
+  const animationSettingsRef = useRef({
+    speed: 0.002,
+    color: new THREE.Color(1, 1, 1),
+    size: 5,
+  });
 
   useEffect(() => {
     const camera = new THREE.PerspectiveCamera(
@@ -27,21 +34,25 @@ const SnowScene = () => {
     cameraRef.current = camera;
 
     const scene = new THREE.Scene();
+    sceneRef.current = scene;
+    scene.fog = new THREE.Fog(0x000000, 500, 2000);
+
     const textureLoader = new THREE.TextureLoader();
 
-    const isMobile = window.innerWidth / window.innerHeight > 1 ? false : true;
-    const backgroundTexture = textureLoader.load(isMobile ? croppedAurora : ApothesisOfHercules);
-    scene.background = backgroundTexture;
+    const setBackgroundTexture = () => {
+      const isMobile = window.innerWidth < 768;
+      const backgroundTexture = isMobile ? apotheosis_mobile : apotheosis;
+      textureLoader.load(backgroundTexture, (texture) => {
+        scene.background = texture;
+      });
+    };
 
-    scene.fog = new THREE.FogExp2(0x000000, 0.00006);
-    sceneRef.current = scene;
+    setBackgroundTexture();
 
     const renderer = new THREE.WebGLRenderer();
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document
-      .getElementById("snow-scene-container")
-      .appendChild(renderer.domElement);
+    document.getElementById("snow-scene-container").appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
     const composer = new EffectComposer(renderer);
@@ -50,85 +61,73 @@ const SnowScene = () => {
     const renderPass = new RenderPass(scene, camera);
     composer.addPass(renderPass);
 
-    const filmPass = new FilmPass(0.5, 0.05, 6100, false);
+    const filmPass = new FilmPass(1, 0.025, 648, false);
     composer.addPass(filmPass);
 
+    const outputPass = new OutputPass();
+    composer.addPass(outputPass);
+
     const snowflakeImages = [snowflake1, snowflake2, snowflake3];
-    const snowflakeTextures = snowflakeImages.map(image => textureLoader.load(image));
+    const snowflakeTextures = snowflakeImages.map((image) =>
+      textureLoader.load(image)
+    );
 
     const geometry = new THREE.BufferGeometry();
-    const vertices = new Array(21000);
+    const vertices = new Float32Array(9000);
 
-    for (let i = 0; i < 7000; i++) {
+    for (let i = 0; i < 3000; i++) {
       const baseIndex = i * 3;
-      const x = Math.random() * 2000 - 1000;
-      const y = Math.random() * 2000 - 1000;
-      const z = Math.random() * 2000 - 1000;
-
-      vertices[baseIndex] = x;
-      vertices[baseIndex + 1] = y;
-      vertices[baseIndex + 2] = z;
+      vertices[baseIndex] = Math.random() * 2000 - 1000;
+      vertices[baseIndex + 1] = Math.random() * 2000 - 1000;
+      vertices[baseIndex + 2] = Math.random() * 2000 - 1000;
     }
 
     geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
 
-    const sizes = [5, 4, 3];
-    const colors = [
-      [1.0, 0.2, 0.5],
-      [0.95, 0.1, 0.5],
-      [0.9, 0.05, 0.5],
-    ];
-
-    snowflakeTextures.forEach((sprite, _index) => {
-      sizes.forEach((size, index) => {
-        const material = new THREE.PointsMaterial({
-          size,
-          map: sprite,
-          blending: THREE.AdditiveBlending,
-          depthTest: false,
-          transparent: true,
-          color: new THREE.Color().setHSL(...colors[index % colors.length]),
-        });
-
-        const particles = new THREE.Points(geometry, material);
-        particles.rotation.x = Math.random() * 6;
-        particles.rotation.y = Math.random() * 6;
-        particles.rotation.z = Math.random() * 6;
-        scene.add(particles);
+    const particlesArray = [];
+    snowflakeTextures.forEach((sprite) => {
+      const material = new THREE.PointsMaterial({
+        size: animationSettingsRef.current.size,
+        map: sprite,
+        blending: THREE.AdditiveBlending,
+        depthTest: false,
+        transparent: true,
+        opacity: 0.5,
+        color: animationSettingsRef.current.color,
       });
 
+      const particles = new THREE.Points(geometry, material);
+      particles.rotation.x = Math.random() * 6;
+      particles.rotation.y = Math.random() * 6;
+      particles.rotation.z = Math.random() * 6;
+      scene.add(particles);
+      particlesArray.push(particles);
     });
 
     function onWindowResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
-
-      const isMobile = window.innerWidth / window.innerHeight > 1 ? false : true;
-      scene.background = textureLoader.load(isMobile ? croppedAurora : ApothesisOfHercules);
+      setBackgroundTexture();
     }
 
     window.addEventListener("resize", onWindowResize);
 
     function animate() {
       requestAnimationFrame(animate);
-      const time = Date.now() * 0.000009;
-
-      scene.children.forEach((object, i) => {
-        if (object instanceof THREE.Points) {
-          object.rotation.y = time * (i < 4 ? i + 1 : -(i + 1));
-        }
+      particlesArray.forEach((object) => {
+        object.rotation.x += animationSettingsRef.current.speed;
+        object.rotation.y += animationSettingsRef.current.speed;
       });
 
       composer.render();
     }
 
+
     animate();
 
     return () => {
-      document
-        .getElementById("snow-scene-container")
-        .removeChild(renderer.domElement);
+      document.getElementById("snow-scene-container").removeChild(renderer.domElement);
       window.removeEventListener("resize", onWindowResize);
     };
   }, []);
