@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.cfa483fe.css",
-    "main.js": "/static/js/main.fc7faaf0.js",
-    "static/media/music2.mp3": "/static/media/music2.225c4ca1cdb082de35bd.mp3",
+    "main.css": "/static/css/main.091bd932.css",
+    "main.js": "/static/js/main.5ee92ace.js",
+    "static/media/music.mp3": "/static/media/music.b09ca02fc6cc23c10160.mp3",
     "static/media/Indelible.otf": "/static/media/Indelible.2b09f2237f1b0452c98a.otf",
     "static/media/apotheosis.png": "/static/media/apotheosis.e7ef93ff7dc3903304f8.png",
     "static/media/Road_Rage.otf": "/static/media/Road_Rage.03e8327bbbb7b1abbae9.otf",
@@ -15,11 +15,11 @@
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
     "static/media/down.svg": "/static/media/down.71a6a99b85e903d014acf370b46619db.svg",
-    "main.cfa483fe.css.map": "/static/css/main.cfa483fe.css.map",
-    "main.fc7faaf0.js.map": "/static/js/main.fc7faaf0.js.map"
+    "main.091bd932.css.map": "/static/css/main.091bd932.css.map",
+    "main.5ee92ace.js.map": "/static/js/main.5ee92ace.js.map"
   },
   "entrypoints": [
-    "static/css/main.cfa483fe.css",
-    "static/js/main.fc7faaf0.js"
+    "static/css/main.091bd932.css",
+    "static/js/main.5ee92ace.js"
   ]
 }
