@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f986655.css",
-    "main.js": "/static/js/main.d40096cf.js",
+    "main.css": "/static/css/main.4ae04cac.css",
+    "main.js": "/static/js/main.438d934a.js",
     "static/media/music.mp3": "/static/media/music.66689d4bebce4d9918ad.mp3",
     "static/media/Indelible.otf": "/static/media/Indelible.2b09f2237f1b0452c98a.otf",
-    "static/media/snowfall.jpg": "/static/media/snowfall.d8503660062653ad6e65.jpg",
+    "static/media/snowfall.jpg": "/static/media/snowfall.f5954a25fa6e1925076b.jpg",
     "static/media/PPMigra-Extrabold.otf": "/static/media/PPMigra-Extrabold.ed612d2cf921c58b964a.otf",
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
     "static/media/snowfall2.jpg": "/static/media/snowfall2.65c22586d4da0d479607.jpg",
@@ -15,11 +15,11 @@
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
     "static/media/down.svg": "/static/media/down.71a6a99b85e903d014acf370b46619db.svg",
-    "main.5f986655.css.map": "/static/css/main.5f986655.css.map",
-    "main.d40096cf.js.map": "/static/js/main.d40096cf.js.map"
+    "main.4ae04cac.css.map": "/static/css/main.4ae04cac.css.map",
+    "main.438d934a.js.map": "/static/js/main.438d934a.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f986655.css",
-    "static/js/main.d40096cf.js"
+    "static/css/main.4ae04cac.css",
+    "static/js/main.438d934a.js"
   ]
 }
