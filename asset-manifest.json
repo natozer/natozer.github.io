@@ -1,25 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.4ae04cac.css",
-    "main.js": "/static/js/main.438d934a.js",
+    "main.css": "/static/css/main.3f2bfbee.css",
+    "main.js": "/static/js/main.c2cbff61.js",
     "static/media/music.mp3": "/static/media/music.66689d4bebce4d9918ad.mp3",
     "static/media/Indelible.otf": "/static/media/Indelible.2b09f2237f1b0452c98a.otf",
     "static/media/snowfall.jpg": "/static/media/snowfall.f5954a25fa6e1925076b.jpg",
-    "static/media/PPMigra-Extrabold.otf": "/static/media/PPMigra-Extrabold.ed612d2cf921c58b964a.otf",
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
     "static/media/snowfall2.jpg": "/static/media/snowfall2.65c22586d4da0d479607.jpg",
     "static/media/SpaceMono-Regular.ttf": "/static/media/SpaceMono-Regular.8a2aa304d0bd5e41d186.ttf",
-    "static/media/NeueMontreal-Medium.otf": "/static/media/NeueMontreal-Medium.15b1070b8dac57958acf.otf",
     "static/media/mute.svg": "/static/media/mute.1bb6bcb02ddfb720558935c5d1eec545.svg",
     "static/media/unmute.svg": "/static/media/unmute.dfa5ad01e34cd72ebc74107ddc55405c.svg",
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
     "static/media/down.svg": "/static/media/down.71a6a99b85e903d014acf370b46619db.svg",
-    "main.4ae04cac.css.map": "/static/css/main.4ae04cac.css.map",
-    "main.438d934a.js.map": "/static/js/main.438d934a.js.map"
+    "main.3f2bfbee.css.map": "/static/css/main.3f2bfbee.css.map",
+    "main.c2cbff61.js.map": "/static/js/main.c2cbff61.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ae04cac.css",
-    "static/js/main.438d934a.js"
+    "static/css/main.3f2bfbee.css",
+    "static/js/main.c2cbff61.js"
   ]
 }
