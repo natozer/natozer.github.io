@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.cd093000.css",
-    "main.js": "/static/js/main.2c316e89.js",
+    "main.js": "/static/js/main.b6133721.js",
     "static/media/music.mp3": "/static/media/music.ad6e02155d1adb1c579b.mp3",
     "static/media/Indelible.otf": "/static/media/Indelible.2b09f2237f1b0452c98a.otf",
     "static/media/apotheosis.png": "/static/media/apotheosis.7273b90dba03f2dc6f89.png",
@@ -14,10 +14,10 @@
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
     "static/media/down.svg": "/static/media/down.71a6a99b85e903d014acf370b46619db.svg",
     "main.cd093000.css.map": "/static/css/main.cd093000.css.map",
-    "main.2c316e89.js.map": "/static/js/main.2c316e89.js.map"
+    "main.b6133721.js.map": "/static/js/main.b6133721.js.map"
   },
   "entrypoints": [
     "static/css/main.cd093000.css",
-    "static/js/main.2c316e89.js"
+    "static/js/main.b6133721.js"
   ]
 }
