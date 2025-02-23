@@ -29,7 +29,7 @@ function Header({ isPlaying, toggleMusic }) {
   return (
       <header className="App-header" ref={headerRef}>
         <div className="header-left">
-          {renderTextWithSpan("Nathaniel Tozer 2025 ✹ ", "vertical-stack")}
+          {renderTextWithSpan("2025", "vertical-stack")}
         </div>
         <div className="header-right">
           <MusicVisualizer isPlaying={isPlaying} />

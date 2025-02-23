@@ -1,27 +1,10 @@
 .footer {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.footer-title {
-  display: flex;
-  align-items: center;
-  font-size: clamp(0.6rem, 1vw + 0.6rem, 1.5rem); 
-  color: var(--primary-color);
-}
-
-.footer-content {
-  font-family: "Neue Montreal Bold";
-  font-weight: 900;
-  border-radius: 4px;
-  width: 100%;
-  padding: clamp(2rem, 5vw, 5rem) 0;
-  font-size: clamp(0.6rem, 1vw + 0.4rem, 1.5rem);
+  padding: clamp(1rem, 1.5vw + 0.5rem, 3rem);
 }
 
 .footer a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--font-color);
   letter-spacing: 0.15em;
   position: relative;
   overflow: hidden;
@@ -34,7 +17,7 @@
   bottom: 0;
   width: 0;
   height: 3px;
-  background-color: var(--primary-color);
+  background-color: var(--font-color);
   transition: width 0.3s;
 }
 

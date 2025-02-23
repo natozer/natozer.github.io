@@ -12,26 +12,21 @@
   top: 0;
   left: 0;
   width: 100%;
-  animation: blurAnimation 3s forwards;
+  animation: blurAnimation 5s forwards;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  font-size: 0.7rem;
-  color: var(--primary-color);
-  font-weight: bold;
+  font-size: 1rem;
+  color: var(--font-color);
+
 }
 
 .header-left {
   align-self: flex-start;
   writing-mode: vertical-rl;
   user-select: none;
-  font-size: 0.8rem;
   margin-top: 1rem;
-  letter-spacing: 2px;
-  font-family: "Migra";
-  color: transparent;
-
-  text-shadow: 2px 2px 2px var(--hero-shadow);
+  
 }
 
 .header-right {
@@ -83,14 +78,14 @@ button {
 
 .bar {
   width: 5px;
-  background-color: var(--primary-color);
+  background-color: var(--font-color);
   border-radius: 2px;
   height: 0;
   transition: background-color 0.3s;
 }
 
 .bar:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--bg-color);
 }
 
 @keyframes bounce {
@@ -137,9 +132,12 @@ button {
   display: inline-block;
   transform: rotate(270deg);
   margin: 3px;
+  opacity: 0.2;
+  font-family: 'Space Mono';
 }
 
 .vertical-stack:hover {
-  color: var(--hero-shadow);
-  text-shadow: none;
+  opacity: 1;
+
+
 }
