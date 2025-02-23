@@ -1,23 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.cd093000.css",
-    "main.js": "/static/js/main.b6133721.js",
-    "static/media/music.mp3": "/static/media/music.ad6e02155d1adb1c579b.mp3",
+    "main.css": "/static/css/main.d8d7b468.css",
+    "main.js": "/static/js/main.3acb0f50.js",
+    "static/media/music.mp3": "/static/media/music.315a007e67c7191b33a3.mp3",
     "static/media/Indelible.otf": "/static/media/Indelible.2b09f2237f1b0452c98a.otf",
-    "static/media/apotheosis.png": "/static/media/apotheosis.7273b90dba03f2dc6f89.png",
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
     "static/media/SpaceMono-Regular.ttf": "/static/media/SpaceMono-Regular.8a2aa304d0bd5e41d186.ttf",
-    "static/media/apotheosis_mobile.png": "/static/media/apotheosis_mobile.a378f38dedaa63d7d9e9.png",
     "static/media/mute.svg": "/static/media/mute.1bb6bcb02ddfb720558935c5d1eec545.svg",
     "static/media/unmute.svg": "/static/media/unmute.dfa5ad01e34cd72ebc74107ddc55405c.svg",
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.70c5531289b8c799a27bbd31559bf496.svg",
-    "static/media/down.svg": "/static/media/down.71a6a99b85e903d014acf370b46619db.svg",
-    "main.cd093000.css.map": "/static/css/main.cd093000.css.map",
-    "main.b6133721.js.map": "/static/js/main.b6133721.js.map"
+    "main.d8d7b468.css.map": "/static/css/main.d8d7b468.css.map",
+    "main.3acb0f50.js.map": "/static/js/main.3acb0f50.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd093000.css",
-    "static/js/main.b6133721.js"
+    "static/css/main.d8d7b468.css",
+    "static/js/main.3acb0f50.js"
   ]
 }
